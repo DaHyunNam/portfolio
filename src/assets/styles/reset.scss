@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: 1.5;
+  color: #000;
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+p {
+  margin: 0;
+}
