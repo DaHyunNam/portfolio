@@ -1,39 +1,22 @@
 @import "../styles/variables";
 
 .hero {
-  padding-top: 120px;
-  min-height: 100vh;
+  height: 100vh;
+  height: 100dvh;
+  padding-top: 140px;
   background-color: $white;
-  padding-left: 12px;
-  position: relative;
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 40px;
-    width: 3px;
-    height: 100%;
-    background-color: $black;
-  }
-  &::before {
-    content: "";
-    position: absolute;
-    top: 60%;
-    right: 57px;
-    transform: translateY(-50%);
-    width: 3px;
-    height: 50%;
-    background-color: $black;
-  }
+  box-sizing: border-box;
+
   &__title-wrapper {
     display: inline-flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 0 24px;
-    font-size: clamp(48px, 10vw, 128px);
-    font-weight: 900;
-    line-height: 1.1;
-    letter-spacing: -2.2px;
+    font-size: clamp(40px, 9vw, 112px);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -2px;
+    color: $navy;
   }
 }
 
@@ -49,10 +32,10 @@
     white-space: nowrap;
 
     &.gray {
-      color: #ccc;
+      color: $gray-300;
     }
     &.highlight {
-      color: $pink;
+      color: $primary;
     }
   }
 }
@@ -62,18 +45,14 @@
   position: relative;
   z-index: 2;
   .bold {
-    color: $black;
+    color: $navy;
   }
 }
 
 @media (max-width: 500px) {
   .hero {
-    &::after,
-    &::before {
-      display: none;
-    }
     &__title-wrapper {
-      font-size: 44px !important;
+      font-size: 40px !important;
     }
   }
 }

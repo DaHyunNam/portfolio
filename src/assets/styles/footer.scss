@@ -1,7 +1,9 @@
+@import "./variables";
+
 .footer {
   padding: 40px 0;
-  background-color: #fff;
-  border-top: 1px solid #999;
+  background-color: $white;
+  border-top: 1px solid $gray-200;
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -13,23 +15,23 @@
   }
   .copyright {
     font-size: 14px;
-    color: #666;
+    color: $gray-500;
     font-weight: 400;
     letter-spacing: 0.5px;
   }
   .btn-top {
     font-size: 13px;
     font-weight: 600;
-    color: #111;
+    color: $navy;
     background: none;
     border: none;
     cursor: pointer;
     padding: 0;
     letter-spacing: 1px;
-    transition: opacity 0.3s;
+    transition: color 0.3s;
 
     &:hover {
-      opacity: 0.5;
+      color: $primary;
     }
   }
 }

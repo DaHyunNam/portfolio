@@ -1,18 +1,32 @@
-$black: #000000;
-$white: #ffffff;
-$lime: #d4e96d;
-$purple: #a582f3;
-$pink: #ffb4b4;
-$border-main: 3px solid $black;
+$primary: #3182f6;
+$primary-light: #e8f3ff;
 
-@mixin bento-box($bg: $white) {
-  background-color: $bg;
-  border: $border-main;
-  padding: 40px;
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$navy: #191f28;
+$gray-700: #4e5968;
+$gray-500: #8b95a1;
+$gray-300: #d1d6db;
+$gray-200: #e5e8eb;
+$gray-100: #f2f4f6;
+$gray-50: #f9fafb;
+
+$white: #ffffff;
+$black: $navy;
+
+$radius-lg: 24px;
+$radius-md: 16px;
+$shadow-card: 0 4px 16px rgba(25, 31, 40, 0.06);
+$shadow-card-hover: 0 8px 24px rgba(25, 31, 40, 0.1);
+
+@mixin toss-card {
+  background-color: $white;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 
   &:hover {
-    transform: translate(-8px, -8px);
-    box-shadow: 10px 10px 0px $black;
+    transform: translateY(-4px);
+    box-shadow: $shadow-card-hover;
   }
 }
