@@ -14,7 +14,7 @@ const Intro = ({ onFinish }: IntroProps) => {
     const timer = setTimeout(() => {
       setIsHeaderMode(true);
       onFinish(); // 여기서 App으로 완료 신호 전송!
-    }, 1100);
+    }, 2000);
     return () => clearTimeout(timer);
   }, [onFinish]);
 

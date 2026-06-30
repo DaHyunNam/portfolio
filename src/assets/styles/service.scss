@@ -1,165 +1,130 @@
 @import "../styles/variables";
 
 .services {
-  padding: 120px 0;
-  background-color: $white;
+  padding: 120px 40px;
+  background-color: #f9f9f9;
 
   &__header {
-    margin-bottom: 48px;
+    margin-bottom: 60px;
 
     .sub-title {
-      font-size: 16px;
-      font-weight: 700;
-      color: $primary;
+      font-size: 20px;
+      font-weight: 900;
+      color: $purple;
       margin-bottom: 10px;
       text-transform: uppercase;
-      letter-spacing: 0.02em;
     }
 
     .main-title {
-      font-size: 44px;
+      font-size: 48px;
       font-weight: 800;
       letter-spacing: -0.03em;
-      color: $navy;
     }
   }
 }
 
-.keyword-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+    .card--01 {
+      grid-column: span 2;
+    }
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    .card--01 {
+      grid-column: span 1;
+    }
+  }
 }
 
-.keyword-item {
-  background: $white;
-  border-radius: $radius-lg;
-  box-shadow: $shadow-card;
-  overflow: hidden;
-  transition: box-shadow 0.25s ease;
+.bento-card {
+  border: $border-main;
+  border-radius: 24px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 6px 6px 0px $black;
+  transition:
+    transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow 0.3s;
 
-  &__row {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    width: 100%;
-    padding: 28px 32px;
-    background: none;
-    border: none;
-    text-align: left;
-    font: inherit;
-    color: inherit;
-    cursor: pointer;
+  &:hover {
+    transform: translate(-6px, -6px);
+    box-shadow: 12px 12px 0px $black;
+  }
 
-    .num {
-      font-size: 15px;
-      font-weight: 700;
-      color: $gray-500;
+  &__head {
+    margin-bottom: 24px;
+
+    .id-badge {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 900;
+      border: 2px solid $black;
+      border-radius: 50px;
+      padding: 4px 12px;
+      margin-bottom: 16px;
+      background: $white;
     }
 
     .title {
-      flex: 1;
-      font-size: 20px;
-      font-weight: 700;
-      color: $navy;
-    }
-
-    .chevron {
-      width: 9px;
-      height: 9px;
-      flex-shrink: 0;
-      border-right: 2px solid $gray-500;
-      border-bottom: 2px solid $gray-500;
-      transform: rotate(45deg);
-      transition: transform 0.25s ease;
+      font-size: 36px;
+      font-weight: 900;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
     }
   }
 
-  &.is-open {
-    box-shadow: $shadow-card-hover;
-
-    .keyword-item__row {
-      .num,
-      .title {
-        color: $primary;
-      }
-
-      .chevron {
-        border-color: $primary;
-        transform: rotate(-135deg);
-      }
-    }
-  }
-
-  &__detail {
-    overflow: hidden;
-  }
-
-  &__content {
-    padding: 24px 32px 32px;
-    border-top: 1px solid $gray-200;
+  &__body {
+    flex-grow: 1;
+    margin-bottom: 30px;
 
     .desc {
       font-size: 18px;
-      font-weight: 700;
+      font-weight: 600;
       line-height: 1.5;
-      color: $navy;
       margin-bottom: 24px;
       word-break: keep-all;
     }
 
     .project-list {
-      margin-bottom: 24px;
-
       li {
-        font-size: 15px;
-        font-weight: 500;
-        color: $gray-700;
-        margin-bottom: 10px;
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 8px;
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 8px;
 
         .bullet {
           width: 6px;
           height: 6px;
-          flex-shrink: 0;
-          background-color: $primary;
+          background-color: $black;
           border-radius: 50%;
         }
       }
     }
+  }
 
+  &__foot {
     .tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 10px;
 
       .tag {
-        font-size: 13px;
-        font-weight: 600;
-        background-color: $gray-100;
-        padding: 6px 14px;
-        border-radius: 50px;
-        color: $gray-700;
-      }
-    }
-  }
-
-  @media (max-width: 600px) {
-    &__row {
-      padding: 22px 24px;
-
-      .title {
-        font-size: 17px;
-      }
-    }
-
-    &__content {
-      padding: 20px 24px 28px;
-
-      .desc {
-        font-size: 16px;
+        font-size: 14px;
+        font-weight: 800;
+        background-color: rgba(255, 255, 255, 0.5);
+        border: 2px solid $black;
+        padding: 6px 12px;
+        border-radius: 8px;
       }
     }
   }
