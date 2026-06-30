@@ -71,6 +71,14 @@ export const ALL_PROJECTS = [
       "Figma",
     ],
     category: "Framework",
+    achievements: [
+      "API 구조를 고려한 Mock Data 활용으로 개발 착수 전 퍼블리싱 완성도 확보 및 개발 협업 효율 향상",
+      "장기렌트, 월렌트, 타고페이 등 다수 서비스의 UI 중복 개발 문제 해결을 위해 공통 패키지 레포지토리 구축",
+      "PC/모바일 영역을 분리한 폴더 구조와 CSS Module 시스템 적용으로 스타일 충돌 방지 및 마크업 누락 최소화",
+      "SVG 아이콘을 CSS url() 방식으로 처리해 별도 이미지 파일 요청을 줄이고 리소스 용량 최적화",
+      "공통 UI 컴포넌트 기준을 정립한 전사 퍼블리싱 가이드 수립, 작업 표준화 기반 마련",
+      "사내 VDI 환경의 낮은 크롬 버전을 고려해 최신 CSS 속성 호환성을 사전 검토하고 크로스 브라우징 이슈 방지",
+    ],
   },
   {
     id: 8,
@@ -78,6 +86,10 @@ export const ALL_PROJECTS = [
     period: "2025.01 ~ 2025.02",
     tech: ["HTML5", "CSS", "jQuery", "웹접근성"],
     category: "Operation",
+    achievements: [
+      "실 서비스 사이트의 접근성 결함 전수 조사 및 수정",
+      "시맨틱 마크업 최적화(Tabindex, 대체 텍스트 보완)로 보편적 사용성 확보",
+    ],
   },
   {
     id: 7,
@@ -85,6 +97,10 @@ export const ALL_PROJECTS = [
     period: "2024.07 ~ 2024.12",
     tech: ["HTML5", "SCSS", "JavaScript", "Github", "Jira"],
     category: "Build",
+    achievements: [
+      "외부 라이브러리 없이 순수 JS/CSS만으로 동적 차트 및 애니메이션 UI 구현",
+      "퍼블리싱 가이드 수립으로 작업 표준화에 기여",
+    ],
   },
   {
     id: 6,
@@ -92,6 +108,10 @@ export const ALL_PROJECTS = [
     period: "2024.04 ~ 2024.06",
     tech: ["HTML5", "CSS", "JavaScript", "Github", "Figma"],
     category: "Build",
+    achievements: [
+      "다양한 그리드 레이아웃 구성으로 브랜드 콘텐츠를 시각적으로 효과적이게 구현",
+      "PC·태블릿 반응형 대응으로 디바이스별 최적화된 사용자 경험 제공",
+    ],
   },
   {
     id: 5,
@@ -99,6 +119,10 @@ export const ALL_PROJECTS = [
     period: "2023.10 ~ 2024.05",
     tech: ["GULP", "PUG", "SCSS", "GitLab", "Figma"],
     category: "Build",
+    achievements: [
+      "Pug 기반 컴포넌트 활용으로 대규모 글로벌 사이트 효율적 운영",
+      "GitLab MR 프로세스를 통한 개발 파트와의 긴밀한 협업",
+    ],
   },
   {
     id: 4,
@@ -114,6 +138,10 @@ export const ALL_PROJECTS = [
       "Redmine",
     ],
     category: "Framework",
+    achievements: [
+      "Vue2 기반 대화형 UI 및 어드민 대시보드 구현",
+      "Chart.js 활용 통계 데이터 시각화로 관리자 시스템 편의성 향상",
+    ],
   },
   {
     id: 3,
@@ -121,6 +149,10 @@ export const ALL_PROJECTS = [
     period: "2022.06 ~ 2023.04",
     tech: ["HTML5", "CSS", "jQuery", "Photoshop"],
     category: "Operation",
+    achievements: [
+      "대규모 B2C 사이트 정기·상시 유지보수 전담",
+      "CMS 환경 내 JSP 작업 병행으로 플랫폼 운영 전 과정 경험",
+    ],
   },
   {
     id: 2,
@@ -128,6 +160,10 @@ export const ALL_PROJECTS = [
     period: "2022.03 ~ 2022.06",
     tech: ["HTML5", "CSS", "jQuery", "SVN", "Jira", "Redmine", "Zeplin"],
     category: "Build",
+    achievements: [
+      "금융권의 엄격한 보안 및 가이드에 맞춘 적응형 웹 UI 구축",
+      "협업 툴 기반의 긴밀한 커뮤니케이션으로 일정 준수",
+    ],
   },
   {
     id: 1,
@@ -135,5 +171,8 @@ export const ALL_PROJECTS = [
     period: "2022.01 ~ 2022.02",
     tech: ["HTML5", "CSS", "jQuery", "Photoshop"],
     category: "Operation",
+    achievements: [
+      "PDP 페이지 등 디자인 시안을 픽셀 단위로 정교하게 구현 및 운영 대응",
+    ],
   },
 ];

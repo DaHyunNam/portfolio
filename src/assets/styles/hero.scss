@@ -6,25 +6,6 @@
   background-color: $white;
   padding-left: 12px;
   position: relative;
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 40px;
-    width: 3px;
-    height: 100%;
-    background-color: $black;
-  }
-  &::before {
-    content: "";
-    position: absolute;
-    top: 60%;
-    right: 57px;
-    transform: translateY(-50%);
-    width: 3px;
-    height: 50%;
-    background-color: $black;
-  }
   &__title-wrapper {
     display: inline-flex;
     flex-wrap: wrap;
