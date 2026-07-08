@@ -24,7 +24,7 @@ export interface ProjectItem {
 export const ABOUT_PARAGRAPHS = [
   "대규모 B2C 서비스 운영과 금융·헬스케어·글로벌까지, 다양한 산업군 프로젝트를 섭렵한 5년 차 웹퍼블리셔입니다.",
   "웹표준과 웹접근성을 기반으로 레거시 코드를 리팩토링하고 공통 컴포넌트화하는 데 강점이 있습니다.",
-  "AI 도구를 활용해 작업 생산성을 높이는 방식에도 익숙합니다.",
+  "Claude Code 등 AI 도구를 활용해 반복 검증 사이클을 빠르게 돌리며 작업 생산성을 높입니다.",
 ];
 
 export const CORE_COMPETENCIES = [
