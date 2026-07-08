@@ -1,30 +1,27 @@
-import Lenis from "@studio-freight/lenis";
-import { useEffect, useState } from "react";
-import "./assets/styles/global.scss";
-import Intro from "./components/Intro";
-import Main from "./pages/Main";
+import "./assets/styles/main.scss";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Experience from "./components/Experience";
+import Projects from "./components/Projects";
+import Sidebar from "./components/Sidebar";
+import { useActiveSection } from "./hooks/useActiveSection";
+
+const SECTION_IDS = ["about", "experience", "projects", "contact"];
 
 function App() {
-  // 인트로 애니메이션 종료 여부를 체크하는 상태
-  const [introFinished, setIntroFinished] = useState(false);
-
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    });
-
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-  }, []);
+  const activeId = useActiveSection(SECTION_IDS);
 
   return (
-    <div className="portfolio-app">
-      <Intro onFinish={() => setIntroFinished(true)} />
-      <Main introFinished={introFinished} />
+    <div className="app">
+      <div className="app__layout">
+        <Sidebar activeId={activeId} />
+        <main className="content">
+          <About />
+          <Experience />
+          <Projects />
+          <Contact />
+        </main>
+      </div>
     </div>
   );
 }

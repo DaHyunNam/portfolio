@@ -1,0 +1,51 @@
+@import "./tokens";
+.app {
+  background-color: $color-bg;
+  color: $color-text;
+  font-family: $font-sans;
+  min-height: 100vh;
+  a {
+    @include focus-ring;
+    color: inherit;
+    transition: color 0.15s ease;
+    &:hover {
+      color: $color-accent;
+    }
+  }
+  &__layout {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $bp-desktop) {
+      flex-direction: row;
+    }
+  }
+}
+.eyebrow-num {
+  @include mono-label;
+  color: $color-sub;
+  margin: 0 0 $space-2;
+}
+.section-title {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+  margin: 0 0 $space-4;
+}
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.chip {
+  @include mono-label;
+  display: inline-flex;
+  align-items: center;
+  height: 26px;
+  padding: 0 $space-2;
+  border: 1px solid $color-border;
+  color: $color-sub;
+}

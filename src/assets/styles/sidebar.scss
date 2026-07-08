@@ -1,0 +1,87 @@
+@import "./tokens";
+.sidebar {
+  width: 100%;
+  padding: $space-6 $space-4;
+  @media (min-width: $bp-desktop) {
+    width: $sidebar-width;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    padding: $space-8 $space-6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__logo {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin: 0 0 $space-4;
+  }
+  &__name {
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: -0.02em;
+    margin: 0 0 $space-1;
+  }
+  &__role {
+    font-size: 16px;
+    color: $color-sub;
+    margin: 0 0 $space-6;
+  }
+  &__nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    @media (min-width: $bp-desktop) {
+      display: flex;
+      flex-direction: column;
+      gap: $space-3;
+    }
+  }
+  &__nav-link {
+    display: flex;
+    align-items: center;
+    gap: $space-2;
+    padding: $space-1 0;
+    color: $color-sub;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  &__nav-num {
+    @include mono-label;
+    color: $color-sub;
+    transition: color 0.2s ease;
+  }
+  &__nav-underline {
+    display: inline-block;
+    width: $space-3;
+    height: 1px;
+    background-color: $color-sub;
+    transition:
+      width 0.2s ease,
+      background-color 0.2s ease;
+  }
+  &__nav-link--active {
+    color: $color-text;
+    .sidebar__nav-num {
+      color: $color-accent;
+    }
+    .sidebar__nav-underline {
+      width: $space-6;
+      background-color: $color-accent;
+    }
+  }
+  &__email {
+    @include mono-label;
+    display: inline-flex;
+    margin-top: $space-6;
+    color: $color-sub;
+    @media (min-width: $bp-desktop) {
+      margin-top: 0;
+    }
+  }
+}
