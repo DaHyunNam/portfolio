@@ -3,12 +3,11 @@
   width: 100%;
   padding: $space-6 $space-4;
   @media (min-width: $bp-desktop) {
-    width: 60%;
+    width: calc(100% - #{$sidebar-width});
     padding: $space-12 $space-8;
   }
 }
 .section {
-  max-width: $content-max;
   padding-block: $space-8;
   border-bottom: 1px solid $color-border;
   &:last-child {
@@ -178,21 +177,29 @@
     margin: 0;
   }
 }
-.contact {
-  &__text {
-    max-width: 480px;
-    font-size: 16px;
-    line-height: 28px;
-    color: $color-sub;
-    margin: 0 0 $space-4;
-    word-break: keep-all;
-  }
-  &__link {
-    @include mono-label;
-    display: inline-flex;
-    align-items: center;
-    height: 36px;
-    padding: 0 $space-2;
-    border: 1px solid $color-border;
+.back-to-top {
+  @include mono-label;
+  position: fixed;
+  right: $space-2;
+  bottom: $space-4;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  padding: 0 $space-3;
+  border: 1px solid $color-border;
+  background-color: $color-bg-elevated;
+  color: $color-sub;
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 0.2s ease,
+    color 0.15s ease;
+  z-index: 10;
+  &--visible {
+    opacity: 1;
+    pointer-events: auto;
   }
 }

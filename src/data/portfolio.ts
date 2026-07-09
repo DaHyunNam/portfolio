@@ -65,7 +65,6 @@ export const SKILL_GROUPS: SkillGroup[] = [
   },
 ];
 
-// 최신순 — Info.tsx에 있던 부서/직급 그대로 복원
 export const EXPERIENCE: ExperienceItem[] = [
   {
     id: "sk-rentcar",
@@ -96,7 +95,6 @@ export const EXPERIENCE: ExperienceItem[] = [
   },
 ];
 
-// 최신순 — 경력기술서 PDF 기준. 전부 동일한 상세 카드로 나열 (구축/운영 각각 별도 항목)
 export const PROJECT_TIMELINE: ProjectItem[] = [
   {
     id: "sk-rentcar-direct",
@@ -106,7 +104,7 @@ export const PROJECT_TIMELINE: ProjectItem[] = [
     stack: ["React", "Next.js", "SCSS", "TypeScript", "Jira", "Confluence"],
     achievements: [
       "API 구조를 고려한 Mock Data 활용으로 개발 착수 전 퍼블리싱 완성도 확보 및 개발 협업 효율 향상",
-      "장기렌트, 월렌트, 타고페이 등 다수 서비스의 UI 중복 개발 문제 해결을 위해 공통 패키지 레포지토리 구축",
+      "서비스별 개별 구현 대신 공통 UI 모듈을 적용해 유지보수 효율과 일관성을 확보",
       "PC/모바일 영역을 분리한 폴더 구조와 CSS Module 시스템 적용으로 스타일 충돌 방지 및 마크업 누락 최소화",
       "SVG 아이콘을 CSS url() 방식으로 처리해 별도 이미지 파일 요청을 줄이고 리소스 용량 최적화",
     ],

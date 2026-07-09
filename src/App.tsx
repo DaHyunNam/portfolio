@@ -1,12 +1,12 @@
 import "./assets/styles/main.scss";
 import About from "./components/About";
-import Contact from "./components/Contact";
+import BackToTop from "./components/BackToTop";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Sidebar from "./components/Sidebar";
 import { useActiveSection } from "./hooks/useActiveSection";
 
-const SECTION_IDS = ["about", "experience", "projects", "contact"];
+const SECTION_IDS = ["about", "experience", "projects"];
 
 function App() {
   const activeId = useActiveSection(SECTION_IDS);
@@ -19,9 +19,9 @@ function App() {
           <About />
           <Experience />
           <Projects />
-          <Contact />
         </main>
       </div>
+      <BackToTop />
     </div>
   );
 }

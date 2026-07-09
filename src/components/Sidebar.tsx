@@ -10,7 +10,6 @@ const NAV_ITEMS: NavItem[] = [
   { id: "about", num: "01", label: "About" },
   { id: "experience", num: "02", label: "Experience" },
   { id: "projects", num: "03", label: "Projects" },
-  { id: "contact", num: "04", label: "Contact" },
 ];
 
 interface SidebarProps {
